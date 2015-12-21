@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="com.example.news.newsreaderclient.ImageContentFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_item_item_image"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:layout_gravity="center"
+        android:id="@+id/Image_progress_img"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/image_item_content"
+        android:background="@mipmap/biz_read_subscription_source_list_header_cover"
+        android:textSize="15sp"
+        android:text="@string/hello_blank_fragment" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_content_num"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom|right"/>
+
+</FrameLayout>

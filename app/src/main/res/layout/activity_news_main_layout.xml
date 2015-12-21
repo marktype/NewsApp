@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.example.util.MyNewsTitle
+        android:id="@+id/news_my_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        myapp:title_first="@mipmap/night_logo"
+        myapp:title_two="@mipmap/ic_msg_center_header"
+        myapp:title_three="@mipmap/abc_ic_menu_moreoverflow_mtrl_alpha"/>
+
+    <!--<fragment-->
+        <!--android:id="@+id/news_list_item"-->
+        <!--android:layout_below="@id/news_my_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:name="com.example.news.newsreaderclient.ListItemFragment"-->
+        <!--/>-->
+
+    <HorizontalScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_scollview"
+        android:layout_below="@id/news_my_title"
+        android:scrollbars="none"
+        >
+
+        <!-- TODO: Update blank fragment layout -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/news_radioGroup"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tab_select_selector"
+                android:checked="true"
+                android:id="@+id/raidoTab1"
+                android:button="@null"
+                android:textColor="@android:color/tertiary_text_light"
+                android:text="@string/title_headline" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/raidoTab2"
+                android:background="@drawable/tab_select_selector"
+                android:textColor="@android:color/tertiary_text_light"
+                android:button="@null"
+                android:text="@string/title_amusement" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/raidoTab3"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="20sp"
+                android:background="@drawable/tab_select_selector"
+                android:button="@null"
+                android:text="@string/title_sports" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/raidoTab4"
+                android:background="@drawable/tab_select_selector"
+                android:textSize="20sp"
+                android:textColor="@android:color/tertiary_text_light"
+                android:button="@null"
+                android:text="@string/title_money" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/tab_select_selector"
+                android:id="@+id/raidoTab5"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="20sp"
+                android:button="@null"
+                android:text="@string/title_science" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/raidoTab6"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/tertiary_text_light"
+                android:button="@null"
+                android:background="@drawable/tab_select_selector"
+                android:text="@string/title_fashion" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/raidoTab7"
+                android:textSize="20sp"
+                android:background="@drawable/tab_select_selector"
+                android:textColor="@android:color/tertiary_text_light"
+                android:button="@null"
+
+                android:text="@string/title_hot" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/raidoTab8"
+                android:background="@drawable/tab_select_selector"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="20sp"
+                android:button="@null"
+                android:text="@string/title_war" />
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+
+
+
+    <!--<fragment-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/news_tab_item"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:name="com.example.news.newsreaderclient.TabItemFragment"/>-->
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/news_viewpager"
+        android:layout_below="@id/news_scollview"
+        />
+
+</RelativeLayout>

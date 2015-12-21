@@ -1,0 +1,93 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.news.activity.NewsMainActivity"
+    android:scrollbars="none"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tab_select_selector"
+            android:checked="true"
+            android:id="@+id/raidoTab1"
+            android:button="@null"
+            android:textColor="@android:color/tertiary_text_light"
+            android:text="@string/title_headline" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/raidoTab2"
+            android:textColor="@android:color/tertiary_text_light"
+            android:button="@null"
+            android:text="@string/title_amusement" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/raidoTab3"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="20sp"
+            android:button="@null"
+            android:text="@string/title_sports" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/raidoTab4"
+            android:textSize="20sp"
+            android:textColor="@android:color/tertiary_text_light"
+            android:button="@null"
+            android:text="@string/title_money" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/raidoTab5"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="20sp"
+            android:button="@null"
+            android:text="@string/title_science" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/raidoTab6"
+            android:textSize="20sp"
+            android:textColor="@android:color/tertiary_text_light"
+            android:button="@null"
+            android:text="@string/title_fashion" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/raidoTab7"
+            android:textSize="20sp"
+            android:textColor="@android:color/tertiary_text_light"
+            android:button="@null"
+            android:text="@string/title_hot" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/raidoTab8"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="20sp"
+            android:button="@null"
+            android:text="@string/title_war" />
+
+    </RadioGroup>
+</HorizontalScrollView>

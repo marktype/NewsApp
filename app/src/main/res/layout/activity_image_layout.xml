@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/red"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="@string/title_image_news"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_radioGroup_gru"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/tab_select_selector"
+            android:checked="true"
+            android:layout_weight="1"
+            android:id="@+id/raidoTab1_one"
+            android:gravity="center"
+            android:button="@null"
+            android:textColor="@android:color/tertiary_text_light"
+            android:text="@string/image_jingxuan" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:id="@+id/raidoTab2_two"
+            android:gravity="center"
+            android:background="@drawable/tab_select_selector"
+            android:textColor="@android:color/tertiary_text_light"
+            android:button="@null"
+            android:text="@string/image_interest" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/raidoTab3_three"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="20sp"
+            android:background="@drawable/tab_select_selector"
+            android:button="@null"
+            android:text="@string/image_Mettle" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/raidoTab4_four"
+            android:background="@drawable/tab_select_selector"
+            android:textSize="20sp"
+            android:textColor="@android:color/tertiary_text_light"
+            android:button="@null"
+            android:text="@string/image_story" />
+    </RadioGroup>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_viewpager_view"/>
+
+    <!--<fragment-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/image_viewpager"-->
+        <!--android:name="com.example.news.newsreaderclient.ImageFragment"/>-->
+
+
+
+</LinearLayout>

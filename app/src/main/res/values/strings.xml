@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">NewsReaderClient</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="news_name">新闻</string>
+    <string name="picture_name">图片</string>
+    <string name="video_name">视频</string>
+    <string name="weather_name">天气</string>
+    <string name="map_name">地图</string>
+    <string name="title_headline">头条</string>
+    <string name="title_amusement">娱乐</string>
+    <string name="title_sports">体育</string>
+    <string name="title_money">财经</string>
+    <string name="title_science">科技</string>
+    <string name="title_hot">热点</string>
+    <string name="title_fashion">时尚</string>
+    <string name="title_war">军事</string>
+
+    <string name="title_image_news">图片新闻</string>
+    <string name="image_jingxuan">精选</string>
+    <string name="image_interest">趣图</string>
+    <string name="image_Mettle">美图</string>
+    <string name="image_story">故事</string>
+
+    <string name="vedio_text">视频模块正在开发中。。。</string>
+    <string name="weather_text">天气模块正在开发中。。。</string>
+    <string name="map_text">地图模块正在开发中。。。</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.util.MyNewsTitle
+        android:id="@+id/news_my_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        myapp:title_first="@drawable/press_selector" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/news_content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/news_content_come"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_content_title"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="15sp" />
+
+            <FrameLayout
+                android:id="@+id/news_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_content_come">
+
+                <ImageView
+                    android:id="@+id/news_content_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp" />
+
+                <ProgressBar
+                    android:id="@+id/layout_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/layout_image_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@mipmap/abc_list_selector_disabled_holo_light"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/news_content_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_content_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp" />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/content_progress"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

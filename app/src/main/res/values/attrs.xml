@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyView">
+        <attr name="textcontent" format="string"/>
+        <attr name="textcolor" format="color"/>
+        <attr name="textbankground" format="reference"/>
+        <attr name="isshow" format="boolean"></attr>
+        <attr name="textsize" format="dimension"/>
+        <attr name="textlocation" format="enum">
+            <enum name="center" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MyNewsTitle">
+        <attr name="title_first" format="reference" />
+        <attr name="title_two" format="reference"/>
+        <attr name="title_three" format="reference"/>
+
+    </declare-styleable>
+    
+
+</resources>

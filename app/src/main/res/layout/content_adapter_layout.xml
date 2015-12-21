@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/adapter_img"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/base_list_default_icon" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/adapter_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/adapter_img"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/background_dark"
+        android:text="这是一个新闻"/>
+
+    <TextView
+        android:id="@+id/adapter_content_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/adapter_title_txt"
+        android:text="这是一个内容"
+        android:layout_toRightOf="@id/adapter_img" />
+</RelativeLayout>
+
