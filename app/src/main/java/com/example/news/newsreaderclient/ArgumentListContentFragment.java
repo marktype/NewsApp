@@ -88,6 +88,7 @@ public class ArgumentListContentFragment extends Fragment implements IXListViewL
             urlId = getArguments().getString("id");
         }
 
+        mGetFile = new WriteAndReadFile();
         mGetFile.mFilePath = getActivity().getFilesDir().getAbsolutePath();
         initLruCache();
         mHandler = new Handler();
@@ -110,19 +111,20 @@ public class ArgumentListContentFragment extends Fragment implements IXListViewL
         mContentList.setOnItemClickListener(this);   //注册item点击事件
 
         connetHttpGetStr(currentPage);   //联网取数据
-
-
+        mView = mInflater.inflate(R.layout.imageslider_layout, null);
+        mContentList.addHeaderView(mView);
         return v;
     }
 
     /*
     * imageSlider控件加入
     * */
-    public View getSliderLayoutView(String[] mImage, final String[] mString) {
-        if (mView == null){
-            mView = mInflater.inflate(R.layout.imageslider_layout, null);
-        }
+    public void getSliderLayoutView(String[] mImage, final String[] mString) {
+//        if (mView == null){
+//            mView = mInflater.inflate(R.layout.imageslider_layout, null);
+//        }
         SliderLayout mSliderLayout = (SliderLayout) mView.findViewById(R.id.image_slider_layout);
+        mSliderLayout.removeAllSliders();
         int length = mImage.length;
         for (int i = 0; i < length; i++) {
             TextSliderView sliderView = new TextSliderView(getActivity());   //向SliderLayout中添加控件
@@ -140,7 +142,7 @@ public class ArgumentListContentFragment extends Fragment implements IXListViewL
         }
         mSliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);  //将小圆点设置到右下方
 
-        return mView;
+//        return mView;
     }
 
     public void connetHttpGetStr(int pageNo) {
@@ -167,6 +169,8 @@ public class ArgumentListContentFragment extends Fragment implements IXListViewL
             public void onSuccess(int i, String s) {
                 super.onSuccess(i, s);
                 ArrayList<HashMap<String, Object>> list = parseHttpData(s);
+                getSliderLayoutView(mImage, mString);
+                mGetFile.writeFile(url,s);
                 if (isUp) {
                     adapter.setList(list);
                     isUp = false;
@@ -176,11 +180,11 @@ public class ArgumentListContentFragment extends Fragment implements IXListViewL
                     onLoad();
                 }
 
-                if (mView == null){
-                    mView = getSliderLayoutView(mImage, mString);  //自动轮播加载数据
-                }
-                //自动轮播
-                mContentList.addHeaderView(mView);
+//                if (mView == null){
+//                    mView = getSliderLayoutView(mImage, mString);  //自动轮播加载数据
+//                }
+//                //自动轮播
+//                mContentList.addHeaderView(mView);
 
             }
 
@@ -542,11 +546,11 @@ public class ArgumentListContentFragment extends Fragment implements IXListViewL
      * 解析数据信息,获取数据源
 	 */
     public ArrayList<HashMap<String, Object>> parseHttpData(String str) {
-        if (mView != null){
-            Logs.e("111111111111");
-            mContentList.removeHeaderView(mView);    //加载时移除view
-
-        }
+//        if (mView != null){
+//            Logs.e("111111111111");
+//            mContentList.removeHeaderView(mView);    //加载时移除view
+//
+//        }
         ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
         try {
             JSONObject object = new JSONObject(str);
