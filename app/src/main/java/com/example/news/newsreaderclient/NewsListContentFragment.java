@@ -2,7 +2,6 @@ package com.example.news.newsreaderclient;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -239,8 +238,8 @@ public class NewsListContentFragment extends Fragment implements IXListViewListe
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         HashMap<String, Object> doc = (HashMap<String, Object>) adapter.getItem(position-2);
         String url = (String) doc.get("docid");
-        Intent intent =new Intent();
-        startActivity(intent);
+//        Intent intent =new Intent();
+//        startActivity(intent);
         onButtonPressed(url);
 
     }
